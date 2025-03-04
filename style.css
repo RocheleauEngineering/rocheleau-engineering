@@ -1,13 +1,15 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
+main {
+    padding-top: 80px;
+}
 /* General Reset */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #bfd3df; /* Deep black */
-    color: #7e8182; /* Soft white */
+    background-color: #bfd3df;
+    color: #7e8182; 
     text-align: center;
     overflow-x: hidden;
 }
@@ -29,7 +31,7 @@ body {
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
     color: #f4f4f4;
     white-space: nowrap;
@@ -73,62 +75,6 @@ body {
     }
 }
 
-/* Ensure page content doesn't go under fixed navbar */
-main {
-    padding-top: 80px;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    text-align: center;
-    padding: 0 10%;
-    max-width: 900px;
-    margin: 0 auto;
-    flex-direction: column;
-}
-
-.text-container {
-    max-width: 600px;
-}
-
-.title {
-    font-size: 38px;
-    font-weight: 600;
-    color: #c9a66b; /* Gold accent */
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.description {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.6;
-    color: #000000;
-    margin-bottom: 30px;
-}
-
-/* CTA Button */
-.cta-button {
-    display: inline-block;
-    padding: 12px 28px;
-    background: linear-gradient(135deg, #c9a66b, #b18b5a);
-    color: #0a0a0a;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.cta-button:hover {
-    background: #f4f4f4;
-    color: #0a0a0a;
-    transform: scale(1.05);
-}
 
 /* Social Media Icons */
 .social-icons {
@@ -147,6 +93,76 @@ main {
 .social-icons a:hover {
     color: #f4f4f4;
     transform: scale(1.1);
+}
+
+.divider {
+    width: 80%;
+    height: 1px;
+    background-color: #7e8182;;
+    margin: 10px 10PX;
+}
+.divider-bottom {
+    width: 80%;
+    height: 1px;
+    background-color: #7e8182;;
+    margin: 40px 10PX;
+}
+
+/* Home Page Section */
+.home-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* Ensures space below navbar */
+    text-align: center;
+
+}
+
+.home {
+    font-size: 48px;
+    font-weight: lighter;
+    margin: 10px 5px;
+    color: #c08519;
+}
+
+.discription {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 5px ;
+    margin-bottom: 10px;
+}
+
+.blurb {
+    font-size: 14px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #c9a66b, #b18b5a);
+    color: #494949;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background: #f4f4f4;
+    color: #c07a02;
+    transform: scale(1.05);
 }
 
 /* Portfolio Header Section */
@@ -171,14 +187,10 @@ main {
     margin: 5px 0;
 }
 
-.divider {
-    width: 80%;
-    height: 1px;
-    background-color: black;
-    margin: 10px 0;
-}
+
 
 .tagline {
+    
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -189,7 +201,7 @@ main {
 }
 
 .tagline span {
-    padding: 0 10px;
+    padding: 0 2px;
 }
 
 .tagline span:not(:last-child)::after {
@@ -287,3 +299,8 @@ main {
 .prev:hover, .next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
+
+
+
+
+
