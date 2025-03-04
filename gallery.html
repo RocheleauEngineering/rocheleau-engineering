@@ -1,82 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            width: 80%;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-        }
-    </style>
+    <title>Carmina Rocheleau | Home </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <h1>Photo Gallery</h1>
-    <div class="gallery" id="gallery">
-        <!-- Images will be added here dynamically -->
-    </div>
-    <div class="lightbox" id="lightbox">
-        <img id="lightbox-img" src="" alt="">
-    </div>
 
-    <script>
-        const imageUrls = [
-            'image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg'
-        ];
-        
-        const gallery = document.getElementById('gallery');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        
-        imageUrls.forEach(url => {
-            const img = document.createElement('img');
-            img.src = url;
-            img.alt = 'Gallery Image';
-            img.addEventListener('click', () => {
-                lightbox.style.display = 'flex';
-                lightboxImg.src = url;
-            });
-            gallery.appendChild(img);
-        });
-        
-        lightbox.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
-    </script>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Carmina Rocheleau</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="education.html">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="gallery.html">Photography</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="home-header">
+            <div class="blurb">
+                Photography is a creative outlet that complements my analytical mindset.
+                 Just as engineering requires precision and problem-solving, capturing 
+                 the perfect shot involves framing, lighting, and timing. Whether 
+                 documenting rugged landscapes or dynamic environments, I approach 
+                 photography as a way to observe, analyze, and preserve the details that 
+                 make each adventure unique. 
+          </div>
+       
+             <div class="divider"></div>
+
+        </section>
+
+             
+       
+       
+    </main>  
 </body>
 </html>
