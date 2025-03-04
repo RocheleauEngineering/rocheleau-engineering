@@ -3,23 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Carmina Rocheleau | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Carmina Rocheleau</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="education.html">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="gallery.html">Photography</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="portfolio-header">
+            <div class="engineering">ENGINEERING</div>
+            <div class="portfolio">PORTFOLIO</div>
+            <div class="divider"></div>
+            <div class="tagline">
+                <span>Explore</span>
+                <span>Learn</span>
+                <span>Design</span>
+                <span>Create</span>
+            </div>
+            <div class="divider"></div>
+        </section>
 
-    <nav class="navbar">
-        <h1 class="logo1">CARMINA ROCHELEAU</h1>
-        <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="education.html">EDUCATION</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-        </ul>
-    </nav>
+        <section class="projects">
+            <div class="project-grid">
+                <div class="project" onclick="openProject(1)">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project Name</h3>
+                    <p>Short description of the project.</p>
+                </div>
+                <div class="project" onclick="openProject(2)">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project Name</h3>
+                    <p>Short description of the project.</p>
+                </div>
+                <div class="project" onclick="openProject(3)">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project Name</h3>
+                    <p>Short description of the project.</p>
+                </div>
+            </div>
+        </section>
 
-    <h2>Portfolio Page</h2>
-    <p>Welcome to the Portfolio page!</p>
-
+        <!-- Modal for Project Details -->
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeProject()">&times;</span>
+                <div class="slider">
+                    <img id="slider-image" src="" alt="Project Image">
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
+                <h2 id="project-title"></h2>
+                <p id="project-description"></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/carminarocheleau/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/@carminarocheleau1575" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/thatminagirl/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
