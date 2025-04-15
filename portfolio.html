@@ -1,100 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carmina Rocheleau | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carmina Rocheleau | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Carmina Rocheleau</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="education.html">Resume</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="gallery.html">Photography</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="portfolio-header">
-            <div class="engineering">ENGINEERING</div>
-            <div class="portfolio">PORTFOLIO</div>
-            <div class="divider"></div>
-            <div class="tagline">
-                <span>Explore</span>
-                <span>Learn</span>
-                <span>Design</span>
-                <span>Create</span>
-            </div>
-            <div class="divider"></div>
-        </section>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Carmina Rocheleau</h1>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">Resume</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gallery.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section class="projects">
-            <div class="project-grid">
-                <div class="project" onclick="openProject(1)">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project Name</h3>
-                    <p>Short description of the project.</p>
-                </div>
-                <div class="project" onclick="openProject(2)">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project Name</h3>
-                    <p>Short description of the project.</p>
-                </div>
-                <div class="project" onclick="openProject(3)">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Project Name</h3>
-                    <p>Short description of the project.</p>
-                </div>
-                <div class="project" onclick="openProject(4)">
-                    <img src="project4.jpg" alt="Project 3">
-                    <h3>Project Name</h3>
-                    <p>Short description of the project.</p>
-                </div>
-                <div class="project" onclick="openProject(5)">
-                    <img src="project5.jpg" alt="Project 5">
-                    <h3>Project Name</h3>
-                    <p>Short description of the project.</p>
-                </div>
-            </div>
-        </section>
+  <main>
+    <section class="portfolio-header">
+      <div class="engineering">ENGINEERING</div>
+      <div class="portfolio">PORTFOLIO</div>
+      <div class="divider"></div>
+      <div class="tagline">
+        <span>Explore</span>
+        <span>Learn</span>
+        <span>Design</span>
+        <span>Create</span>
+      </div>
+      <div class="divider"></div>
+    </section>
 
-        <!-- Modal for Project Details -->
-        <div id="project-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeProject()">&times;</span>
-                <div class="slider">
-                    <img id="slider-image" src="" alt="Project Image">
-                    <button class="prev" onclick="prevSlide()">&#10094;</button>
-                    <button class="next" onclick="nextSlide()">&#10095;</button>
-                </div>
-                <h2 id="project-title"></h2>
-                <p id="project-description"></p>
-            </div>
+
+
+<section class="projects">
+    <div class="project-grid">
+        <div class="project" onclick="openProject(6)">
+            <img src="images/Multibeam-1.png" alt="Sonar Deployment">
+            <h3>Multibeam Sonar Deployment System</h3>
+            <p>Arctic-proof structure for marine sensors.</p>
+          </div>
+          <div class="project" onclick="openProject(7)">
+            <img src="images/Mooring-1.png" alt="Mooring System">
+            <h3>Mooring System for Antarctic Deployment</h3>
+            <p>Corrosion-resistant mooring for data buoys.</p>
+          </div>
+          <div class="project" onclick="openProject(8)">
+            <img src="images/winch-1.jpg" alt="Winch Cover">
+            <h3>Protective Winch Cover</h3>
+            <p>Snap-lock marine cover reduced maintenance.</p>
+          </div>
+          <div class="project" onclick="openProject(9)">
+            <img src="images/pressure-1.png" alt="Sensor Housing">
+            <h3>High-Pressure Instrument Housing</h3>
+            <p>Designed for 10,000 psi ocean depths.</p>
+          </div>
+          <div class="project" onclick="openProject(10)">
+            <img src="images/Calibration-1.png" alt="Calibration System">
+            <h3>Ocean Sensor Calibration System</h3>
+            <p>Thermal-pressure chamber ±0.05°C accuracy.</p>
+          </div>
+    </div>
+  
+    <h2 class="section-heading">University Projects</h2>
+    <div class="project-grid">
+        <div class="project" onclick="openProject(1)">
+            <img src="images/Thermal-1.png" alt="Mini Fridge">
+            <h3>Thermal Optimization of Mini Fridge</h3>
+            <p>Improved thermal efficiency via CFD redesign.</p>
+          </div>
+          <div class="project" onclick="openProject(2)">
+            <img src="images/VTOL-1.png" alt="VTOL Drone">
+            <h3>VTOL SAR Drone Development</h3>
+            <p>Lightweight drone built for remote SAR missions.</p>
+          </div>
+          <div class="project" onclick="openProject(3)">
+            <img src="images/Ammonia-1.png" alt="Ammonia Fuel Cell">
+            <h3>Ammonia Fuel Cell Evaluation</h3>
+            <p>Evaluated catalyst/membrane combos for DAFCs.</p>
+          </div>
+          <div class="project" onclick="openProject(4)">
+            <img src="images/Gearbox-1.png" alt="Gearbox">
+            <h3>Planetary Gearbox for Ferris Wheel</h3>
+            <p>Designed a high-longevity gearbox using FEA.</p>
+          </div>
+          <div class="project" onclick="openProject(5)">
+            <img src="images/MARV-1N-1.png" alt="Minebot">
+            <h3>Mine Detection Robot (MARV-1N)</h3>
+            <p>Built a safe landmine-triggering rover.</p>
+          </div>
+          <div class="project" onclick="openProject(11)">
+            <img src="images/Brachistochrone-1.png" alt="Curve Optimization">
+            <h3>Brachistochrone Optimization</h3>
+            <p>Numerically solved descent curve with BFGS.</p>
+          </div>
+          <div class="project" onclick="openProject(12)">
+            <img src="images/Automated-1.png" alt="Sorting System">
+            <h3>Automated Sorting System</h3>
+            <p>Arduino-controlled sorter with 0 misclassifications.</p>
+          </div>
+    </div>
+  </section>
+  
+
+
+
+    <!-- Modal -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeProject()">&times;</span>
+        <div class="slider">
+          <img id="slider-image" src="" alt="Project Image" />
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
-    </main>
-    
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/carminarocheleau/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.youtube.com/@carminarocheleau1575" target="_blank" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com/thatminagirl/" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </footer>
-    
-    <script src="script.js"></script>
+        <h2 id="project-title"></h2>
+        <p id="project-description"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/carminarocheleau/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com/@carminarocheleau1575" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/thatminagirl/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
