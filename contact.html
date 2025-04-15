@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carmina Rocheleau | Home </title>
+    <title>Carmina Rocheleau | contact </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -14,9 +14,9 @@
         <nav class="navbar">
             <h1 class="logo">Carmina Rocheleau</h1>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="education.html">Resume</a></li>
+                <li><a href="about.html">Resume</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="gallery.html">Photography</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -24,11 +24,33 @@
         </nav>
     </header>
     <main>
-        <section class="portfolio-header"></section> 
+        <section class="contact-section">
+            <h2 class="contact-title">Get in Touch</h2>
+            <p class="contact-subtext">I'd love to hear from you. Whether it's about a project, collaboration, or just to say hi!</p>
             
-       
-             <div class="divider"></div>
-        </section>
+            <div class="contact-container">
+              <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+              </form>
+          
+              <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Victoria, BC</p>
+                <p><i class="fas fa-envelope"></i> carmina@rocheleau-engineering.com</p>
+                <p><i class="fas fa-phone"></i> (250) 580 - 6223</p>
+          
+                <div class="social-icons">
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
        
     </main>  
 </body>
