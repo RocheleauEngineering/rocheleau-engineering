@@ -2,45 +2,271 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carmina Rocheleau | Home </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carmina Rocheleau | gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Carmina Rocheleau</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="education.html">Resume</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="gallery.html">Photography</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="home-header">
-            <div class="blurb">
-                Photography is a creative outlet that complements my analytical mindset.
-                 Just as engineering requires precision and problem-solving, capturing 
-                 the perfect shot involves framing, lighting, and timing. Whether 
-                 documenting rugged landscapes or dynamic environments, I approach 
-                 photography as a way to observe, analyze, and preserve the details that 
-                 make each adventure unique. 
-          </div>
-       
-             <div class="divider"></div>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Carmina Rocheleau</h1>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">Resume</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gallery.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        </section>
+  <main>
+    <section class="home-header">
+      <div class="blurb">
+        Photography is a creative outlet that complements my analytical mindset.
+        Just as engineering requires precision and problem-solving, capturing
+        the perfect shot involves framing, lighting, and timing. Whether
+        documenting rugged landscapes or dynamic environments, I approach
+        photography as a way to observe, analyze, and preserve the details that
+        make each adventure unique.
+      </div>
 
-             
-       
-       
-    </main>  
+      <div class="divider"></div>
+    </section>
+
+    <!-- ✅ Updated Photo Collage Section -->
+    <section class="photo-collage">
+      <div class="collage" id="collage"></div>
+    </section>
+
+    <script>
+      const imageFolder = 'images/gallery/';
+      const imageList = [
+  'VideoCapture_20240928-172203.jpg',
+  'DSC_1290.jpg',
+  'DSC_0998.jpg',
+  'DSC_0994.jpg',
+  'DSC_0977.jpg',
+  'DSC_0968.jpg',
+  'DSC_0964.jpg',
+  'DSC_0937.jpg',
+  'DSC_0928.jpg',
+  'DSC_0916.jpg',
+  'DSC_0908-2.jpg',
+  'DSC_0908.jpg',
+  'DSC_0905.jpg',
+  'DSC_0894.jpg',
+  'DSC_0889.jpg',
+  'DSC_0885.jpg',
+  'DSC_0882.jpg',
+  'DSC_0881.jpg',
+  'DSC_0877.jpg',
+  'DSC_0865.jpg',
+  'DSC_0853.jpg',
+  'DSC_0840.jpg',
+  'DSC_0836.jpg',
+  'DSC_0826.jpg',
+  'DSC_0819.jpg',
+  'DSC_0818.jpg',
+  'DSC_0800.jpg',
+  'DSC_0799.jpg',
+  'DSC_0783.jpg',
+  'DSC_0777.jpg',
+  'DSC_0771.jpg',
+  'DSC_0758.jpg',
+  'DSC_0744.jpg',
+  'DSC_0717.jpg',
+  'DSC_0712.jpg',
+  'DSC_0709-2.jpg',
+  'DSC_0709.jpg',
+  'DSC_0705.jpg',
+  'DSC_0704.jpg',
+  'DSC_0694.jpg',
+  'DSC_0679.jpg',
+  'DSC_0677-2.jpg',
+  'DSC_0677.jpg',
+  'DSC_0663.jpg',
+  'DSC_0661.jpg',
+  'DSC_0657.jpg',
+  'DSC_0645-2.jpg',
+  'DSC_0642.jpg',
+  'DSC_0640.jpg',
+  'DSC_0630.jpg',
+  'DSC_0628-2.jpg',
+  'DSC_0628.jpg',
+  'DSC_0623.jpg',
+  'DSC_0619.jpg',
+  'DSC_0616.jpg',
+  'DSC_0597.jpg',
+  'DSC_0589.jpg',
+  'DSC_0582.jpg',
+  'DSC_0563.jpg',
+  'DSC_0561.jpg',
+  'DSC_0551.jpg',
+  'DSC_0546.jpg',
+  'DSC_0542.jpg',
+  'DSC_0528.jpg',
+  'DSC_0527.jpg',
+  'DSC_0525.jpg',
+  'DSC_0519.jpg',
+  'DSC_0514.jpg',
+  'DSC_0502.jpg',
+  'DSC_0495.jpg',
+  'DSC_0493.jpg',
+  'DSC_0485.jpg',
+  'DSC_0478-2.jpg',
+  'DSC_0478.jpg',
+  'DSC_0466-2.jpg',
+  'DSC_0466.jpg',
+  'DSC_0463.jpg',
+  'DSC_0461.jpg',
+  'DSC_0454-2.jpg',
+  'DSC_0452.jpg',
+  'DSC_0447-2.jpg',
+  'DSC_0442.jpg',
+  'DSC_0433.jpg',
+  'DSC_0431-2.jpg',
+  'DSC_0431.jpg',
+  'DSC_0424.jpg',
+  'DSC_0418.jpg',
+  'DSC_0399-2.jpg',
+  'DSC_0399.jpg',
+  'DSC_0397.jpg',
+  'DSC_0391.jpg',
+  'DSC_0390.jpg',
+  'DSC_0387.jpg',
+  'DSC_0380.jpg',
+  'DSC_0379.jpg',
+  'DSC_0348.jpg',
+  'DSC_0318.jpg',
+  'DSC_0315.jpg',
+  'DSC_0308.jpg',
+  'DSC_0307.jpg',
+  'DSC_0304.jpg',
+  'DSC_0303.jpg',
+  'DSC_0302.jpg',
+  'DSC_0295.jpg',
+  'DSC_0289.jpg',
+  'DSC_0283.jpg',
+  'DSC_0277.jpg',
+  'DSC_0276.jpg',
+  'DSC_0271.jpg',
+  'DSC_0267.jpg',
+  'DSC_0262.jpg',
+  'DSC_0261.jpg',
+  'DSC_0259.jpg',
+  'DSC_0258.jpg',
+  'DSC_0256.jpg',
+  'DSC_0252.jpg',
+  'DSC_0246-2.jpg',
+  'DSC_0246.jpg',
+  'DSC_0245.jpg',
+  'DSC_0228.jpg',
+  'DSC_0225.jpg',
+  'DSC_0219.jpg',
+  'DSC_0217.jpg',
+  'DSC_0215-2.jpg',
+  'DSC_0215.jpg',
+  'DSC_0214.jpg',
+  'DSC_0212.jpg',
+  'DSC_0205-2.jpg',
+  'DSC_0205.jpg',
+  'DSC_0198-2.jpg',
+  'DSC_0198.jpg',
+  'DSC_0196.jpg',
+  'DSC_0193.jpg',
+  'DSC_0188.jpg',
+  'DSC_0183.jpg',
+  'DSC_0182.jpg',
+  'DSC_0181.jpg',
+  'DSC_0178-2.jpg',
+  'DSC_0178.jpg',
+  'DSC_0169.jpg',
+  'DSC_0166.jpg',
+  'DSC_0165-2.jpg',
+  'DSC_0165.jpg',
+  'DSC_0159-2.jpg',
+  'DSC_0155.jpg',
+  'DSC_0138.jpg',
+  'DSC_0134.jpg',
+  'DSC_0130.jpg',
+  'DSC_0104.jpg',
+  'DSC_0091.jpg',
+  'DSC_0089-2.jpg',
+  'DSC_0089.jpg',
+  'DSC_0086.jpg',
+  'DSC_0080.jpg',
+  'DSC_0079.jpg',
+  'DSC_0077.jpg',
+  'DSC_0076.jpg',
+  'DSC_0074.jpg',
+  'DSC_0073.jpg',
+  'DSC_0070-2.jpg',
+  'DSC_0070.jpg',
+  'DSC_0067.jpg',
+  'DSC_0066-2.jpg',
+
+  'DSC_0062.jpg',
+  'DSC_0060.jpg',
+  'DSC_0058.jpg',
+  'DSC_0051.jpg',
+  'DSC_0045.jpg',
+  'DSC_0042.jpg',
+  'DSC_0036.jpg',
+  'DSC_0033.jpg',
+  'DSC_0032-2.jpg',
+  'DSC_0028.jpg',
+  'DSC_0026.jpg',
+  'DSC_0025-2.jpg',
+  'DSC_0018-2.jpg',
+  'DSC_0018.jpg',
+  'DSC_0011-2.jpg',
+  'DSC_0012-2.jpg',
+  'DSC_0008-2.jpg',
+  'DSC_0007-2.jpg',
+  'DSC_0006.jpg',
+  'DSC_0005-2.jpg',
+  'DSC_0005.jpg',
+  'DSC_0001.jpg',
+  'DSC_0012.jpg',
+  'DSC_0036.jpg',
+  'DSC_0282.jpg',
+  'DSC_0477.jpg',
+  'DSC_0499.jpg',
+  'DSC_0503.jpg',
+  'DSC_0481.jpg',
+  'DSC_0457.jpg',
+  'DSC_0421.jpg',
+  'DSC_0135.jpg',
+  'DSC_0065.jpg',
+  'DJI_0071.jpg',
+  'DJI_0042.jpg',
+];
+
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      const shuffledImages = shuffleArray(imageList.slice());
+      const container = document.getElementById('collage');
+
+      shuffledImages.forEach(filename => {
+        const img = document.createElement('img');
+        img.src = imageFolder + filename;
+        img.alt = 'Gallery photo';
+        container.appendChild(img);
+      });
+    </script>
+  </main>
 </body>
+
 </html>
