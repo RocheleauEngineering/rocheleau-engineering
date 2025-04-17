@@ -29,18 +29,30 @@
             <p class="contact-subtext">I'd love to hear from you. Whether it's about a project, collaboration, or just to say hi!</p>
 
         
-<form
+<!-- modify this form HTML and place wherever you want your form -->
+  <div class="contact-container">
+            <form
   action="https://formspree.io/f/mgvabnyg"
   method="POST"
 >
-
-            <div class="contact-container">
-              <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" rows="5" required></textarea>
+  <label>
+   Name:
+    <input type="text" placeholder="Your Name" required>
+  </label>
+                <label>
+    Email:
+    <input type="email" placeholder="Email" required>
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
                 <button type="submit" class="btn">Send Message</button>
-              </form>
+</form>
+  </div>
+
+        
                 
           
               <div class="contact-info">
@@ -51,7 +63,7 @@
           
                 <div class="social-icons">
                   <a href="#"><i class="fab fa-linkedin"></i></a>
-                  <a href="#"><i class="fab fa-github"></i></a>
+            
                   <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
               </div>
