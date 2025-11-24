@@ -348,7 +348,7 @@ body {
     padding: 0;
     background-color: #d6eaf8; /* soft sky blue */
     font-family: 'Helvetica Neue', sans-serif;
-    color: #6b6b6b; /* soft gray for body text */
+    color: #000000; /* soft gray for body text */
   }
   
   /* Layout */
@@ -976,4 +976,5 @@ body {
   
 
   
+
 
