@@ -903,7 +903,7 @@ body {
   }
   
   .collage img:hover {
-    transform: scale(1.75);
+    transform: scale(0);
   }
   
 
@@ -976,6 +976,7 @@ body {
   
 
   
+
 
 
 
